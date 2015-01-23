@@ -24,11 +24,11 @@ class Client
     clients
   end
 
-  # define_method(:==) do |other_client|
-  #   id() == other_client.id() &&
-  #     last_name() == other_client.last_name() &&
-  #     first_name() == other_client.first_name() &&
-  #     stylist_id() == other_client.stylist_id()
-  # end
+  define_method(:==) do |other_client|
+    id() == other_client.id() &&
+      last_name() == other_client.last_name() &&
+      first_name() == other_client.first_name() &&
+      stylist_id() == other_client.stylist_id()
+  end
 
 end
