@@ -3,12 +3,14 @@
 <p>Add a stylist:</p>
 
 <form action="/stylists" method="post">
-  <label for="first_name">First name: </label>
-  <input id="first_name" name="first_name" type="text" />
-
-  <label for="last_name">Last name: </label>
-  <input id="last_name" name="last_name" type="text" />
-
+  <div class="form-group">
+    <label for="first_name">First name: </label>
+    <input id="first_name" name="first_name" type="text" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last name: </label>
+    <input id="last_name" name="last_name" type="text" class="form-control"/>
+  </div>
   <button type="submit" class="btn">Add stylist</button>
 </form>
 <br />
