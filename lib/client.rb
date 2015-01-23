@@ -1,5 +1,7 @@
 class Client
 
+  attr_reader(:first_name)
+
   define_method(:initialize) do |attributes|
     @id = attributes[:id]
     @first_name = attributes[:first_name]
@@ -21,5 +23,9 @@ class Client
     end
     clients
   end
+
+  # define_method(:==) do
+  #
+  # end
 
 end
