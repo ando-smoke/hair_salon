@@ -24,4 +24,11 @@ describe(Stylist) do
     end
   end
 
+  describe("#id") do
+    it("returns the ID of a stylist") do
+      stylist_1 = Stylist.new({ :id => 3,
+        :first_name => "Paul", :last_name => "Mitchell"})
+      expect(stylist_1.id()).to(eq(3))
+    end
+  end
 end
