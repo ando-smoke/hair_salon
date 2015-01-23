@@ -21,4 +21,10 @@ class Stylist
     stylists
   end
 
+  define_method(:==) do |other_stylist|
+    id() == other_stylist.id() &&
+      last_name() == other_stylist.last_name() &&
+      first_name() == other_stylist.first_name()
+  end
+
 end
