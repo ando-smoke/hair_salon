@@ -42,6 +42,14 @@ describe(Client) do
         :stylist_id => 1})
       expect(client_1.id()).to(eq(2))
     end
+
+    it("sets its ID when you save it") do
+      client_1 = Client.new({ :id => nil,
+        :first_name => "Billy", :last_name => "Blanks",
+        :stylist_id => 1})
+      client_1.save()
+      expect(client_1.id()).to(be_an_instance_of(Fixnum))
+    end
   end
 
   describe("#==") do
