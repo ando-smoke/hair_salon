@@ -17,6 +17,15 @@ describe(Client) do
     end
   end
 
+  describe("#last_name") do
+    it("returns the last name of a client") do
+      client_1 = Client.new({ :id => nil,
+        :first_name => "Billy", :last_name => "Blanks",
+        :stylist_id => 1})
+      expect(client_1.last_name()).to(eq("Blanks"))
+    end
+  end
+
   # describe("#==") do
   #   it("is the same client if it has the same id, first name " \
   #     "last name, and stylist id") do
