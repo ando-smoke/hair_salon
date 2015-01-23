@@ -6,3 +6,8 @@ require("./lib/stylist")
 require("pg")
 
 DB = PG.connect({ :dbname => "to_do" })
+
+get("/") do
+  @stylists = Stylist.all()
+  erb(:index)
+end
