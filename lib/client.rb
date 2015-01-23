@@ -1,6 +1,6 @@
 class Client
 
-  attr_reader(:first_name, :last_name, :stylist_id)
+  attr_reader(:id, :first_name, :last_name, :stylist_id)
 
   define_method(:initialize) do |attributes|
     @id = attributes[:id]
@@ -24,8 +24,11 @@ class Client
     clients
   end
 
-  # define_method(:==) do
-  #
+  # define_method(:==) do |other_client|
+  #   id() == other_client.id() &&
+  #     last_name() == other_client.last_name() &&
+  #     first_name() == other_client.first_name() &&
+  #     stylist_id() == other_client.stylist_id()
   # end
 
 end
