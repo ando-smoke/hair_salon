@@ -1,7 +1,9 @@
-<h1>Add a client to <%= @stylist.first_name() + " " +
-  @stylist.last_name() %>
-</h1>
-<br />
+<div class="page-heading">
+  <h1>Add a client to <em class="em-special"><%= @stylist.first_name() + " " +
+    @stylist.last_name() %></em>
+  </h1>
+</div><br />
+
 <form action="/clients" method="post">
   <input id="stylist_id" name="stylist_id" type="hidden" value="<%= @stylist.id() %>" />
 
@@ -14,8 +16,8 @@
     <input id="last_name" name="last_name" type="text" class="form-control"/>
   </div>
   <button type="submit" class="btn">Add client</button>
-</form>
-<br />
+</form><br />
+
 <% if @stylist.all_clients().any?() %>
   <h3>Current client list:</h3>
   <ul>

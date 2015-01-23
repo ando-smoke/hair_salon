@@ -1,0 +1,26 @@
+body {
+  background-color: #C5AFA0;
+}
+
+h1 {
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: #29524A;
+}
+
+a:hover {
+  color: #338066;
+}
+
+.em-special {
+  font-weight: bold;
+  color: #29524A;
+}
+
+.page-heading {
+  background-color: #E9BCB7;
+}
