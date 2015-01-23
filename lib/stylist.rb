@@ -9,7 +9,10 @@ class Stylist
   end
 
   define_singleton_method(:all) do
-    returned_stylists = DB.exec("SELECT * FROM stylists;")
+    returned_stylists = DB.exec(
+      "SELECT * " \
+      "FROM stylists " \
+      "ORDER BY last_name, first_name;")
     stylists = []
     returned_stylists.each() do |stylist|
       id = stylist["id"].to_i()
@@ -51,7 +54,8 @@ class Stylist
     returned_clients = DB.exec(
       "SELECT * " \
       "FROM clients " \
-      "WHERE stylist_id = #{id()};")
+      "WHERE stylist_id = #{id()} " \
+      "ORDER BY last_name, first_name;")
     returned_clients.each() do |client|
       id = client["id"].to_i()
       first_name = client["first_name"]

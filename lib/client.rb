@@ -10,7 +10,10 @@ class Client
   end
 
   define_singleton_method(:all) do
-    returned_clients = DB.exec("SELECT * FROM clients;")
+    returned_clients = DB.exec(
+      "SELECT * " \
+      "FROM clients " \
+      "ORDER BY last_name, first_name;")
     clients = []
     returned_clients.each() do |client|
       id = client["id"].to_i()
