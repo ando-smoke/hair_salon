@@ -1,7 +1,7 @@
 <h1>Add a client to <%= @stylist.first_name() + " " +
   @stylist.last_name() %>
 </h1>
-
+<br />
 <form action="/clients" method="post">
   <input id="stylist_id" name="stylist_id" type="hidden" value="<%= @stylist.id() %>" />
 
@@ -13,7 +13,7 @@
 
   <button type="submit" class="btn">Add client</button>
 </form>
-
+<br />
 <% if @stylist.all_clients().any?() %>
   <h3>Current client list:</h3>
   <ul>
@@ -26,5 +26,5 @@
 <% else %>
   <p>There are no clients yet!</p>
 <% end %>
-
+<br />
 <a href="/">Return to Main Page</a>
