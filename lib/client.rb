@@ -31,4 +31,12 @@ class Client
       stylist_id() == other_client.stylist_id()
   end
 
+  define_method(:save) do
+    result = DB.exec(
+      "INSERT INTO clients (first_name, last_name, stylist_id) " \
+      "  VALUES('#{first_name()}', '#{last_name()}', '#{stylist_id()}') "\
+      "  RETURNING id;")
+    @id = result.first().fetch("id").to_i()
+  end
+
 end
