@@ -13,10 +13,10 @@ class Client
     returned_clients = DB.exec("SELECT * FROM clients;")
     clients = []
     returned_clients.each() do |client|
-      id = client["id"]
+      id = client["id"].to_i()
       first_name = client["first_name"]
       last_name = client["last_name"]
-      stylist_id = client["stylist_id"]
+      stylist_id = client["stylist_id"].to_i()
       clients.push(Client.new({ :id => id,
         :first_name => first_name, :last_name => last_name,
         :stylist_id => stylist_id }))
