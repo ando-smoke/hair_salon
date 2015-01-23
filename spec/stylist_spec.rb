@@ -30,6 +30,13 @@ describe(Stylist) do
         :first_name => "Paul", :last_name => "Mitchell"})
       expect(stylist_1.id()).to(eq(3))
     end
+
+    it("sets its ID when you save it") do
+      stylist_1 = Stylist.new({ :id => 3,
+        :first_name => "Paul", :last_name => "Mitchell"})
+      stylist_1.save()
+      expect(stylist_1.id()).to(be_an_instance_of(Fixnum))
+    end
   end
 
   describe("#==") do
