@@ -1,5 +1,7 @@
 class Stylist
 
+  attr_reader(:first_name)
+
   define_method(:initialize) do |attributes|
     @id = attributes[:id]
     @first_name = attributes[:first_name]
