@@ -14,7 +14,7 @@
   <button type="submit" class="btn">Add client</button>
 </form>
 
-<% if @stylist.any?() %>
+<% if @stylist.all_clients().any?() %>
   <h3>Current client list:</h3>
   <ul>
     <% @stylist.all_clients().each() do |client| %>
